@@ -1,0 +1,31 @@
+{% extends 'wrapper.html' %}
+
+{% block title %}
+<title>Добавление товара</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Добавление товара</h1>
+    <form method="post">
+      <div class="form-group">
+        <label for="title">Загаловок</label>
+        <input type="text" class="form-control" name="title" id="title" aria-describedby="titleHelp" placeholder="Введите название" required>
+        <small id="titleHelp" class="form-text text-muted">Вы можете ввести название: крутой пирок 3000.</small>
+      </div>
+      <div class="form-group">
+        <label for="price">Цена</label>
+        <input type="number" class="form-control" name="price" id="price" aria-describedby="priceHelp" placeholder="Введите ценик на товар" required>
+        <small id="priceHelp" class="form-text text-muted">Вы можете ввести ценик: 3000.</small>
+      </div>
+      <div class="form-group">
+        <label for="text">Описание</label>
+        <textarea class="form-control" name="text" id="text" rows="3"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="mx-6 btn-lg btn-success">Отправить</button>
+      </div>
+
+    </form>
+</div>
+{% endblock %}

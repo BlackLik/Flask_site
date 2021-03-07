@@ -1,0 +1,26 @@
+{% extends 'wrapper.html' %}
+
+{% block title %}
+<title>Онлайн магазин</title>
+{% endblock %}
+
+{% block body %}
+<h1>Онлайн магазин</h1>
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        {% for item in data %}
+        <div class="card mb-4 box-shadow">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">{{item.title}}</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">{{item.price}} р.</h1>
+                <p class="card-text">{{item.text}}</p>
+                <a href="/buy/{{item.id}}" type="button" class="btn btn-lg btn-block btn-primary">Помочь</a>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
